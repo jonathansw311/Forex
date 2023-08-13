@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+    {% block title%}Currency Converter{% endblock %}
+    {% block page_name%}Currency Converter{% endblock %}
+
+    {% block content%}
+
+    <h1>We calculated {{bcurr}} {{beg}} {{begAmt}} converts to {{ecurr}} {{end}} {{endAmt}}</h1>
+
+    <button onclick="window.location.href='/'">Return Home</button>
+    {% endblock %}

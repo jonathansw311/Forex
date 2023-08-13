@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+    {% block title%}Currency Converter{% endblock %}
+    {% block page_name%}Currency Converter{% endblock %}
+
+    {% block content%}
+    <h1>Forex Currency converter</h1>
+  
+ <form action="/calc", method="post">   
+<label for="begCurr">Choose a currancy:</label>
+<select id="begCurr" name="begCurr">
+  <option value="USD">USD</option>
+  {% for exc in exchanges %}
+  <option value="{{exc}}">{{exc}}</option>
+  {% endfor %}
+  
+</select>
+<br>
+<br>
+<input type="text" label="Enter starting currency" placeholder="amount" class="amount" name="amt">
+<br>
+<br>
+<input type="text" label="Enter currency to convert into" placeholder="Currency" class="endCurr" name="endCurr">
+
+<br>
+<br>
+<button>Convert</button>
+</form>
+
+{% endblock %}
